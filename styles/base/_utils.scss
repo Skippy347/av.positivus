@@ -1,0 +1,22 @@
+@use "./media";
+
+.container {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+.hidden-tablet {
+  @include media.breakpoint-down("tablet") {
+    display: none !important;
+  }
+}
+
+.visible-tablet {
+  display: none !important;
+
+  @include media.breakpoint-down("tablet") {
+    display: block !important;
+  }
+}

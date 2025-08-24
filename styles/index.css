@@ -131,6 +131,27 @@ svg * {
     --section-padding-y: var(--spacing-30);
   }
 }
+.container {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+@media (max-width: 768px) {
+  .hidden-tablet {
+    display: none !important;
+  }
+}
+
+.visible-tablet {
+  display: none !important;
+}
+@media (max-width: 768px) {
+  .visible-tablet {
+    display: block !important;
+  }
+}
+
 body {
   font-family: var(--font-family-base);
   font-size: clamp(1rem, 0.9285714286rem + 0.3571428571vw, 1.25rem);
