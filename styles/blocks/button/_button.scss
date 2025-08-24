@@ -19,6 +19,9 @@
   border: var(--border);
   border-radius: var(--border-radius-14);
 
+  white-space: nowrap;
+  min-width: max-content;
+
   @include mixins.hover-hoverable {
     color: var(--color-dark);
     background-color: var(--color-palette-lime-100);

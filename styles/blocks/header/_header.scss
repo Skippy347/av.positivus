@@ -1,0 +1,17 @@
+@use "../../base/functions";
+
+.header {
+  padding-block: functions.rem(70px);
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    column-gap: var(--spacing-40);
+  }
+
+  &__nav {
+    margin-left: auto;
+  }
+}
