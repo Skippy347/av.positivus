@@ -1,4 +1,5 @@
 @use "./functions";
+@use "./mixins";
 
 body {
   font-family: var(--font-family-base);
@@ -25,6 +26,12 @@ svg {
 
 button {
   font-size: var(--button-font-size);
+}
+
+a {
+  @include mixins.reset-link;
+
+  font-size: #{functions.fluid-text(16, 18)};
 }
 
 h1,

@@ -50,6 +50,30 @@ $hover-unsupported: "(hover: none), (hover: coarse), (pointer: coarse)";
   -moz-appearance: none;
 }
 
+@mixin reset-link {
+  font-family: inherit;
+
+  display: inline-flex;
+  align-items: center;
+
+  cursor: pointer;
+
+  font-size: inherit;
+  line-height: normal;
+
+  padding: 0;
+  margin: 0;
+
+  text-decoration: none;
+
+  color: inherit;
+  background: none;
+
+  border: none;
+
+  vertical-align: middle;
+}
+
 @mixin absolute-center {
   position: absolute;
   top: 50%;

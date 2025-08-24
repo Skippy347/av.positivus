@@ -180,6 +180,27 @@ button {
   font-size: var(--button-font-size);
 }
 
+a {
+  font-family: inherit;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  font-size: inherit;
+  line-height: normal;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: inherit;
+  background: none;
+  border: none;
+  vertical-align: middle;
+  font-size: clamp(1rem, 0.9642857143rem + 0.1785714286vw, 1.125rem);
+}
+
 h1,
 h2,
 h3,
