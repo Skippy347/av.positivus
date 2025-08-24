@@ -331,7 +331,7 @@ h4 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 48px;
+  height: 3rem;
 }
 @media (hover: hover) and (pointer: fine) {
   .menu__link:hover::after {
@@ -362,8 +362,8 @@ h4 {
           flex-direction: row;
 }
 .menu_gap-40 {
-  -webkit-column-gap: 40px;
-     -moz-column-gap: 40px;
-          column-gap: 40px;
+  -webkit-column-gap: var(--spacing-40);
+     -moz-column-gap: var(--spacing-40);
+          column-gap: var(--spacing-40);
 }
 /*# sourceMappingURL=index.css.map */
