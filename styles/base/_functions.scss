@@ -1,0 +1,33 @@
+@use "sass:math";
+@use "sass:meta";
+
+@function fluid-text($min: 16, $max: 48) {
+  $maxViewportWidth: 1440;
+  $minViewportWidth: 320;
+
+  $maxSize: math.div($max, 16);
+  $minSize: math.div($min, 16);
+  $maxWidth: math.div($maxViewportWidth, 16);
+  $minWidth: math.div($minViewportWidth, 16);
+
+  $slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
+  $yAxisIntersection: -$minWidth * $slope + $minSize;
+
+  @return clamp(#{$minSize * 1rem}, #{$yAxisIntersection * 1rem} + #{$slope * 100vw}, #{$maxSize * 1rem});
+}
+
+@function rem($pixel, $base: 16) {
+  @if meta.type-of($pixel) == "number" {
+    $value: if(math.unit($pixel) == "px", math.div($pixel, 1px), $pixel);
+    @return math.div($value, $base) * 1rem;
+  } @else {
+    @error "rem() expects a number, got #{meta.type-of($pixel)}: #{$pixel}";
+  }
+}
+
+@function px-to-em($spacing-px, $font-size-px, $root-font-size: 16) {
+  $font-size-rem: math.div($font-size-px, $root-font-size);
+  $local-font-size-px: $font-size-rem * $root-font-size;
+
+  @return math.div($spacing-px, $local-font-size-px) * 1em;
+}
