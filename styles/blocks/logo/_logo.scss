@@ -1,0 +1,12 @@
+@use "../../base/media";
+@use "../../base/functions";
+
+.logo {
+  flex-shrink: 0;
+
+  max-width: #{functions.rem(220px)};
+
+  @include media.breakpoint-down("tablet") {
+    max-width: #{functions.rem(111px)};
+  }
+}

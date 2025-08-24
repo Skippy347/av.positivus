@@ -119,7 +119,7 @@ svg * {
   --border-radius-14: 0.875rem;
   --border-radius-45: 2.8125rem;
   --shadow: 0 5px 0 0 var(--color-palette-black-950);
-  --transition-duration: 0.2s;
+  --transition-duration-200ms: 0.2s;
   --section-padding-y: var(--spacing-70);
   --container-width: 90rem;
   --container-padding-x: var(--spacing-20);
@@ -182,8 +182,8 @@ svg {
   transition-property: color, background-color, opacity, -webkit-transform;
   transition-property: color, background-color, transform, opacity;
   transition-property: color, background-color, transform, opacity, -webkit-transform;
-  -webkit-transition-duration: var(--transition-duration);
-          transition-duration: var(--transition-duration);
+  -webkit-transition-duration: var(--transition-duration-200ms);
+          transition-duration: var(--transition-duration-200ms);
   -webkit-transition-timing-function: ease;
           transition-timing-function: ease;
 }
@@ -365,5 +365,16 @@ h4 {
   -webkit-column-gap: var(--spacing-40);
      -moz-column-gap: var(--spacing-40);
           column-gap: var(--spacing-40);
+}
+
+.logo {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  max-width: 13.75rem;
+}
+@media (max-width: 768px) {
+  .logo {
+    max-width: 6.9375rem;
+  }
 }
 /*# sourceMappingURL=index.css.map */

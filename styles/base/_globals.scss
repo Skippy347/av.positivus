@@ -20,7 +20,7 @@ input,
 textarea,
 svg {
   transition-property: color, background-color, transform, opacity;
-  transition-duration: var(--transition-duration);
+  transition-duration: var(--transition-duration-200ms);
   transition-timing-function: ease;
 }
 
