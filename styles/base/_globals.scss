@@ -24,10 +24,6 @@ svg {
   transition-timing-function: ease;
 }
 
-button {
-  font-size: var(--button-font-size);
-}
-
 a {
   @include mixins.reset-link;
 

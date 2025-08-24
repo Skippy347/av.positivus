@@ -1,0 +1,36 @@
+@use "../../base/functions";
+@use "../../base/mixins";
+
+.button {
+  @include mixins.reset-button;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: #{functions.rem(20px)};
+
+  padding-block: #{functions.px-to-em(20px, 20px)};
+  padding-inline: #{functions.px-to-em(35px, 20px)};
+
+  color: var(--color-white);
+  background-color: var(--color-palette-black-950);
+
+  border: var(--border);
+  border-radius: var(--border-radius-14);
+
+  @include mixins.hover-hoverable {
+    color: var(--color-dark);
+    background-color: var(--color-palette-lime-100);
+  }
+
+  &_theme_transparent {
+    color: var(--color-dark);
+
+    background-color: transparent;
+
+    @include mixins.hover-hoverable() {
+      background-color: var(--color-palette-lime-100);
+    }
+  }
+}

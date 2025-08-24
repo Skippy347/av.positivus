@@ -105,6 +105,7 @@ svg * {
   --font-family-base: "Space Grotesk", sans-serif;
   --color-white: #ffffff;
   --color-black: #000000;
+  --color-palette-black-950: #191a23;
   --color-palette-lime-100: #b9ff66;
   --color-palette-gray-50: #f3f3f3;
   --color-palette-gray-400: #898989;
@@ -121,9 +122,6 @@ svg * {
   --section-padding-y: var(--spacing-70);
   --container-width: 90rem;
   --container-padding-x: var(--spacing-20);
-  --button-font-size: 1.25rem;
-  --spacing-button-horizontal: var(--spacing-20);
-  --spacing-button-vertical: var(--spacing-35);
 }
 
 @media (max-width: 768px) {
@@ -176,10 +174,6 @@ svg {
           transition-timing-function: ease;
 }
 
-button {
-  font-size: var(--button-font-size);
-}
-
 a {
   font-family: inherit;
   display: -webkit-inline-box;
@@ -222,5 +216,63 @@ h3 {
 
 h4 {
   font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+}
+
+.button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  text-align: inherit;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.25rem;
+  padding-block: 1em;
+  padding-inline: 1.75em;
+  color: var(--color-white);
+  background-color: var(--color-palette-black-950);
+  border: var(--border);
+  border-radius: var(--border-radius-14);
+}
+@media (hover: hover) and (pointer: fine) {
+  .button:hover {
+    color: var(--color-dark);
+    background-color: var(--color-palette-lime-100);
+  }
+}
+@media (hover: none), (hover: coarse), (pointer: coarse) {
+  .button:active, .button:focus-visible {
+    color: var(--color-dark);
+    background-color: var(--color-palette-lime-100);
+  }
+}
+.button_theme_transparent {
+  color: var(--color-dark);
+  background-color: transparent;
+}
+@media (hover: hover) and (pointer: fine) {
+  .button_theme_transparent:hover {
+    background-color: var(--color-palette-lime-100);
+  }
+}
+@media (hover: none), (hover: coarse), (pointer: coarse) {
+  .button_theme_transparent:active, .button_theme_transparent:focus-visible {
+    background-color: var(--color-palette-lime-100);
+  }
 }
 /*# sourceMappingURL=index.css.map */

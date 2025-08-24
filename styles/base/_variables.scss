@@ -5,7 +5,9 @@
   --font-family-base: "Space Grotesk", sans-serif;
 
   --color-white: #ffffff;
+
   --color-black: #000000;
+  --color-palette-black-950: #191a23;
 
   --color-palette-lime-100: #b9ff66;
 
@@ -31,10 +33,6 @@
 
   --container-width: #{functions.rem(1440px)};
   --container-padding-x: var(--spacing-20);
-
-  --button-font-size: 1.25rem;
-  --spacing-button-horizontal: var(--spacing-20);
-  --spacing-button-vertical: var(--spacing-35);
 }
 
 @include media.breakpoint-down("tablet") {
