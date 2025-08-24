@@ -1,0 +1,31 @@
+$breakpoints: (
+  "mobile-xs": 320px,
+  "mobile-s": 480px,
+  "mobile": 600px,
+  "tablet": 768px,
+  "tablet-landscape": 1024px,
+  "laptop": 1280px,
+  "desktop": 1440px,
+  "desktop-wide": 1920px,
+);
+
+@mixin breakpoint-up($key) {
+  $value: map-get($breakpoints, $key);
+  @if $value {
+    @media (min-width: ($value + 1)) {
+      @content;
+    }
+  } @else {
+    @warn "No breakpoint found for '#{$key}' in $breakpoints.";
+  }
+}
+@mixin breakpoint-down($key) {
+  $value: map-get($breakpoints, $key);
+  @if $value {
+    @media (max-width: $value) {
+      @content;
+    }
+  } @else {
+    @warn "No breakpoint found for '#{$key}' in $breakpoints.";
+  }
+}
