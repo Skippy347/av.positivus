@@ -301,4 +301,56 @@ h4 {
 .header__nav {
   margin-left: auto;
 }
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.menu__link {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 48px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .menu__link:hover::after {
+    width: 100%;
+  }
+}
+@media (hover: none), (hover: coarse), (pointer: coarse) {
+  .menu__link:active::after, .menu__link:focus-visible::after {
+    width: 100%;
+  }
+}
+.menu__link::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  translate: -50%;
+  height: 2px;
+  width: 0;
+  background-color: currentColor;
+  -webkit-transition-duration: inherit;
+          transition-duration: inherit;
+}
+.menu_orientation_horizontal {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.menu_gap-40 {
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
+}
 /*# sourceMappingURL=index.css.map */

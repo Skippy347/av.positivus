@@ -1,0 +1,43 @@
+@use "../../base/mixins";
+
+.menu {
+  display: flex;
+  align-items: center;
+
+  &__link {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    height: 48px;
+
+    @include mixins.hover-hoverable {
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+
+      top: 100%;
+      left: 50%;
+      translate: -50%;
+
+      height: 2px;
+      width: 0;
+
+      background-color: currentColor;
+      transition-duration: inherit;
+    }
+  }
+
+  &_orientation_horizontal {
+    flex-direction: row;
+  }
+
+  &_gap-40 {
+    column-gap: 40px;
+  }
+}
