@@ -1,0 +1,32 @@
+@use "../../../base/functions";
+@use "../../../base/mixins";
+
+.burger-button {
+  @include mixins.reset-button;
+
+  position: relative;
+
+  width: #{functions.rem(48px)};
+  aspect-ratio: 1;
+
+  border-radius: var(--border-radius-14);
+
+  @include mixins.hover-hoverable {
+    background-color: var(--color-palette-lime-100);
+  }
+
+  &::after {
+    @include mixins.absolute-center;
+
+    content: "";
+
+    height: #{functions.rem(2px)};
+    width: 50%;
+
+    background-color: var(--color-black);
+
+    border-radius: var(--border-radius-7);
+
+    box-shadow: 0 #{functions.rem(-8px)}, 0 #{functions.rem(8px)};
+  }
+}

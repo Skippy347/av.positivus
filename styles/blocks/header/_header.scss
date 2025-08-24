@@ -1,7 +1,7 @@
 @use "../../base/functions";
 
 .header {
-  padding-block: functions.rem(70px);
+  padding-block: #{functions.rem(70px)};
 
   &__inner {
     display: flex;
