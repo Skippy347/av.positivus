@@ -1,0 +1,58 @@
+@mixin visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+$hover-supported: "(hover: hover) and (pointer: fine)";
+$hover-unsupported: "(hover: none), (hover: coarse), (pointer: coarse)";
+
+@mixin hover-hoverable {
+  @media #{$hover-supported} {
+    &:hover {
+      @content;
+    }
+  }
+
+  @media #{$hover-unsupported} {
+    &:active,
+    &:focus-visible {
+      @content;
+    }
+  }
+}
+
+@mixin reset-button {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  border-radius: 0;
+
+  background: none;
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+
+  text-align: inherit;
+
+  cursor: pointer;
+  appearance: none;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
