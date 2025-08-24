@@ -1,0 +1,51 @@
+@use "./functions";
+
+body {
+  font-family: var(--font-family-base);
+
+  font-size: #{functions.fluid-text(16, 20)};
+
+  font-weight: 400;
+
+  line-height: 1.28;
+
+  color: var(--color-black);
+  background-color: var(--color-white);
+}
+
+a,
+button,
+input,
+textarea,
+svg {
+  transition-property: color, background-color, transform, opacity;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: ease;
+}
+
+button {
+  font-size: var(--button-font-size);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: #{functions.fluid-text(43, 60)};
+}
+
+h2 {
+  font-size: #{functions.fluid-text(36, 40)};
+}
+
+h3 {
+  font-size: #{functions.fluid-text(26, 30)};
+}
+
+h4 {
+  font-size: #{functions.fluid-text(18, 18)};
+}

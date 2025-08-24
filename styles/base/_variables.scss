@@ -4,10 +4,8 @@
 :root {
   --font-family-base: "Space Grotesk", sans-serif;
 
-  --color-light: #ffffff;
-
-  --color-palette-black-900: #292a32;
-  --color-palette-black-950: #191a23;
+  --color-white: #ffffff;
+  --color-black: #000000;
 
   --color-palette-lime-100: #b9ff66;
 
@@ -27,11 +25,14 @@
 
   --shadow: 0 5px 0 0 var(--color-palette-black-950);
 
+  --transition-duration: 0.2s;
+
   --section-padding-y: var(--spacing-70);
 
   --container-width: #{functions.rem(1440px)};
   --container-padding-x: var(--spacing-20);
 
+  --button-font-size: 1.25rem;
   --spacing-button-horizontal: var(--spacing-20);
   --spacing-button-vertical: var(--spacing-35);
 }
