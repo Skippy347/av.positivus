@@ -12,6 +12,20 @@
   @include mixins.visually-hidden;
 }
 
+.hidden-mobile {
+  @include media.breakpoint-down("mobile") {
+    display: none !important;
+  }
+}
+
+.visible-mobile {
+  display: none !important;
+
+  @include media.breakpoint-down("mobile") {
+    display: block !important;
+  }
+}
+
 .hidden-tablet {
   @include media.breakpoint-down("tablet") {
     display: none !important;

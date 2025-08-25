@@ -6,7 +6,7 @@
 
   max-width: #{functions.rem(220px)};
 
-  @include media.breakpoint-down("tablet") {
+  @include media.breakpoint-down("mobile") {
     max-width: #{functions.rem(111px)};
   }
 }

@@ -37,9 +37,10 @@
 
   &_orientation_horizontal {
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
-  &_gap-40 {
-    column-gap: var(--spacing-40);
+  &_gap-30 {
+    column-gap: var(--spacing-30);
   }
 }

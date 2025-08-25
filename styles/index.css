@@ -109,6 +109,7 @@ svg * {
   --color-palette-lime-100: #b9ff66;
   --color-palette-gray-50: #f3f3f3;
   --color-palette-gray-400: #898989;
+  --spacing-10: 0.625rem;
   --spacing-20: 1.25rem;
   --spacing-30: 1.875rem;
   --spacing-35: 2.187rem;
@@ -127,6 +128,7 @@ svg * {
 
 @media (max-width: 768px) {
   :root {
+    --container-padding-x: var(--spacing-10);
     --section-padding-y: var(--spacing-30);
   }
 }
@@ -147,6 +149,21 @@ svg * {
   clip-path: inset(100%) !important;
   clip: rect(0 0 0 0) !important;
   overflow: hidden !important;
+}
+
+@media (max-width: 600px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+
+.visible-mobile {
+  display: none !important;
+}
+@media (max-width: 600px) {
+  .visible-mobile {
+    display: block !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -295,7 +312,17 @@ h4 {
 }
 
 .header {
-  padding-block: 4.375rem;
+  padding-top: 3.75rem;
+}
+@media (max-width: 1440px) {
+  .header {
+    padding-top: 2.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .header {
+    padding-top: 1.25rem;
+  }
 }
 .header__inner {
   display: -webkit-box;
@@ -307,12 +334,19 @@ h4 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-column-gap: var(--spacing-40);
      -moz-column-gap: var(--spacing-40);
           column-gap: var(--spacing-40);
+  row-gap: var(--spacing-20);
 }
 .header__nav {
-  margin-left: auto;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 .menu {
@@ -360,11 +394,13 @@ h4 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
-.menu_gap-40 {
-  -webkit-column-gap: var(--spacing-40);
-     -moz-column-gap: var(--spacing-40);
-          column-gap: var(--spacing-40);
+.menu_gap-30 {
+  -webkit-column-gap: var(--spacing-30);
+     -moz-column-gap: var(--spacing-30);
+          column-gap: var(--spacing-30);
 }
 
 .logo {
@@ -372,7 +408,7 @@ h4 {
       flex-shrink: 0;
   max-width: 13.75rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .logo {
     max-width: 6.9375rem;
   }

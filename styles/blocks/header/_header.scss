@@ -1,17 +1,31 @@
 @use "../../base/functions";
+@use "../../base/media";
 
 .header {
-  padding-block: #{functions.rem(70px)};
+  padding-top: #{functions.rem(60px)};
+
+  @include media.breakpoint-down("desktop") {
+    padding-top: #{functions.rem(40px)};
+  }
+
+  @include media.breakpoint-down("mobile") {
+    padding-top: #{functions.rem(20px)};
+  }
 
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    flex-wrap: wrap;
+
     column-gap: var(--spacing-40);
+
+    row-gap: var(--spacing-20);
   }
 
   &__nav {
-    margin-left: auto;
+    order: 1;
+    flex-basis: 100%;
   }
 }
