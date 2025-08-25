@@ -1,0 +1,41 @@
+@use "../../../base/functions";
+@use "../../../base/mixins";
+
+.cross-button {
+  @include mixins.reset-button;
+
+  position: relative;
+
+  width: #{functions.rem(48px)};
+  aspect-ratio: 1;
+
+  border-radius: var(--border-radius-14);
+
+  @include mixins.hover-hoverable {
+    background-color: var(--color-palette-lime-100);
+  }
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: #{functions.rem(7px)};
+
+    height: #{functions.rem(2px)};
+    width: 70%;
+
+    background-color: var(--color-black);
+
+    border-radius: var(--border-radius-7);
+  }
+
+  &::before {
+    rotate: 45deg;
+  }
+
+  &::after {
+    rotate: -45deg;
+  }
+}

@@ -2,11 +2,7 @@
 @use "../../base/media";
 
 .header {
-  padding-top: #{functions.rem(60px)};
-
-  @include media.breakpoint-down("desktop") {
-    padding-top: #{functions.rem(40px)};
-  }
+  padding-top: #{functions.rem(40px)};
 
   @include media.breakpoint-down("mobile") {
     padding-top: #{functions.rem(20px)};

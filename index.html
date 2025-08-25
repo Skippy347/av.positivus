@@ -27,7 +27,7 @@
             loading="lazy"
           />
         </a>
-        <nav class="header__nav hidden-tablet" aria-label="Main navigation">
+        <nav class="header__nav hidden-mobile" aria-label="Main navigation">
           <ul class="menu menu_orientation_horizontal menu_gap-30">
             <li class="menu__item">
               <a class="menu__link" href="/about-us">About us</a>
@@ -51,7 +51,11 @@
           Request a quote
         </button>
 
-        <button class="header__burger-button burger-button visible-mobile" type="button">
+        <button
+          class="header__burger-button burger-button visible-mobile"
+          type="button"
+          onclick="document.getElementById('mobileOverlay').showModal()"
+        >
           <span class="visually-hidden">Toggle mobile menu</span>
         </button>
       </div>

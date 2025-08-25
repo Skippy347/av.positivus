@@ -312,12 +312,7 @@ h4 {
 }
 
 .header {
-  padding-top: 3.75rem;
-}
-@media (max-width: 1440px) {
-  .header {
-    padding-top: 2.5rem;
-  }
+  padding-top: 2.5rem;
 }
 @media (max-width: 600px) {
   .header {
@@ -455,5 +450,51 @@ h4 {
   border-radius: var(--border-radius-7);
   -webkit-box-shadow: 0 -0.5rem, 0 0.5rem;
           box-shadow: 0 -0.5rem, 0 0.5rem;
+}
+
+.cross-button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  text-align: inherit;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  width: 3rem;
+  aspect-ratio: 1;
+  border-radius: var(--border-radius-14);
+}
+@media (hover: hover) and (pointer: fine) {
+  .cross-button:hover {
+    background-color: var(--color-palette-lime-100);
+  }
+}
+@media (hover: none), (hover: coarse), (pointer: coarse) {
+  .cross-button:active, .cross-button:focus-visible {
+    background-color: var(--color-palette-lime-100);
+  }
+}
+.cross-button::before, .cross-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0.4375rem;
+  height: 0.125rem;
+  width: 70%;
+  background-color: var(--color-black);
+  border-radius: var(--border-radius-7);
+}
+.cross-button::before {
+  rotate: 45deg;
+}
+.cross-button::after {
+  rotate: -45deg;
 }
 /*# sourceMappingURL=index.css.map */
