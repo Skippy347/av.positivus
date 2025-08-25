@@ -12,6 +12,12 @@
   @include mixins.visually-hidden;
 }
 
+.hidden-mobile-up {
+  @include media.breakpoint-up("mobile") {
+    display: none !important;
+  }
+}
+
 .hidden-mobile {
   @include media.breakpoint-down("mobile") {
     display: none !important;

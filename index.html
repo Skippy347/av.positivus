@@ -60,5 +60,36 @@
         </button>
       </div>
     </header>
+
+    <dialog class="menu-overlay hidden-mobile-up" id="mobileOverlay">
+      <form class="menu-overlay__close container" method="dialog">
+        <a class="menu-overlay__logo logo" href="/">
+          <img class="logo__image" src="./images/logo.svg" alt="Positivus" height="36" width="220" loading="lazy" />
+        </a>
+        <button class="menu-overlay__close-button cross-button" type="submit">
+          <span class="visually-hidden">Close navigation menu</span>
+        </button>
+      </form>
+
+      <div class="menu-overlay__content container">
+        <ul class="menu menu_orientation_vertical menu_gap-30">
+          <li class="menu__item">
+            <a class="menu__link" href="/about-us">About us</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="/services">Services</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="/use-cases">Use Cases</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="/pricing">Pricing</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="/blog">Blog</a>
+          </li>
+        </ul>
+      </div>
+    </dialog>
   </body>
 </html>

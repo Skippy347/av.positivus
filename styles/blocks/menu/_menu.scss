@@ -40,6 +40,10 @@
     flex-wrap: wrap;
   }
 
+  &_orientation_vertical {
+    flex-direction: column;
+  }
+
   &_gap-30 {
     column-gap: var(--spacing-30);
   }
